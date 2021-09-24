@@ -38,6 +38,15 @@
             </div>
         </div>
         <div class="form-group">
+            <label for="">Tags</label>
+            @foreach($tags as $tag)
+                <div>
+                    <input name="tags[]" type="checkbox" value="{{ $tag->id }}">
+                    <label>{{$tag->name}}</label>
+                </div>
+                @endforeach
+        </div>
+        <div class="form-group">
             <label for="image">Image</label>
             <input class="form-control" type="text" id="image" name="image">
         </div>

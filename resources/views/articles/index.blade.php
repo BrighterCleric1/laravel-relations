@@ -61,6 +61,9 @@
         </tr>
       @endforeach
     </tbody>
-  </table> 
+  </table>
+  <div class="justify-content-center d-flex">
+    {!! $articles->onEachSide(3)->links() !!}
+  </div>
 
 @endsection 

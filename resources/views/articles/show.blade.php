@@ -7,8 +7,17 @@
             <div class="col"><h1>{{$articles->title}}</h1></div>
         </div> 
         <div class="row">
-            <div class="col"><h3>{{$articles->subtitle}}</h1></div>
-        </div> 
+            <div class="col"><h3>{{$articles->subtitle}}</h3></div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <h3>
+                    @foreach ($articles->tag as $tag)
+                        {{$tag->name}}
+                    @endforeach
+                </h3>
+            </div>
+        </div>  
         <div class="row">
             <div class="col"><img src="{{$articles->image}}" alt=""></div>
         </div> 

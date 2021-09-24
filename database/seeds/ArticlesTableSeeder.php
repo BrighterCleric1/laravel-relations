@@ -2,6 +2,7 @@
 
 use App\Article;
 use App\Author;
+use App\Tag;
 use Illuminate\Database\Seeder;
 use Faker\Generator as Faker;
 
@@ -46,8 +47,10 @@ class ArticlesTableSeeder extends Seeder
             $articleObject->content = $faker->paragraphs(5, true);
             $articleObject->image = $faker->imageUrl(640, 480, 'animals', true);
             $randAuthorKey = array_rand($listOfAuthorID, 1);
+
             $categoryID = $listOfAuthorID[$randAuthorKey];
             $articleObject->author_id = $categoryID;
+
             $articleObject->save();
         }
     }
