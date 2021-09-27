@@ -15,4 +15,8 @@ class Article extends Model
     {
         return $this->belongsToMany(Tag::class);
     }
+    public function comment()
+    {
+        return $this->hasMany(Comment::class);
+    }
 }
