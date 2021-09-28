@@ -53,7 +53,7 @@
             <hr>
             <h2>ADD A COMMENT</h2>
         </div>
-        <form action="{{ route('articles.store') }}" method="POST">
+        <form action="{{ route('comments.store', $articles) }}" method="POST">
             @csrf
     
             <div class="form-group">
